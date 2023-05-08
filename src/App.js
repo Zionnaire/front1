@@ -11,9 +11,17 @@ import HowWeDo from './compnents/HowWeDo';
 import Company from './compnents/Company';
 import Contact from './compnents/Contact';
 import Footer from './compnents/Footer';
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
+    <BrowserRouter>
+        {/* <Routes>
+          <Route path="/" element={<Home/>}/>
+        </Routes> */}
+    
     <div className='gen'>
       <Hamburger/>
       <Firstheader/>
@@ -26,8 +34,9 @@ function App() {
       <Company />
       <Contact />
       <Footer />
+      
     </div>
-  );
+    </BrowserRouter>);
 }
 
 export default App;
